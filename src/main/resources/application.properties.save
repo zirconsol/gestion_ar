@@ -1,0 +1,18 @@
+# Deshabilitar la autoconfiguraci�n de DataSource y JPA para evitar error de base de datos
+#spring.autoconfigure.exclude=\
+#org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+# H2 database (en memoria)
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# Hibernate / JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# H2 Web Console (opcional pero �til)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
